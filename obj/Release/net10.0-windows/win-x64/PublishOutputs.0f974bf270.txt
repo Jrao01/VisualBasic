@@ -1,0 +1,8 @@
+C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\bin\Release\net10.0-windows\win-x64\publish\ServiEmpaqSystem.exe
+C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\bin\Release\net10.0-windows\win-x64\publish\logo.jpeg
+C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\bin\Release\net10.0-windows\win-x64\publish\ServiEmpaqSystem.dll
+C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\bin\Release\net10.0-windows\win-x64\publish\ServiEmpaqSystem.deps.json
+C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\bin\Release\net10.0-windows\win-x64\publish\ServiEmpaqSystem.runtimeconfig.json
+C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\bin\Release\net10.0-windows\win-x64\publish\ServiEmpaqSystem.pdb
+C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\bin\Release\net10.0-windows\win-x64\publish\System.Data.SQLite.dll
+C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\bin\Release\net10.0-windows\win-x64\publish\SQLite.Interop.dll

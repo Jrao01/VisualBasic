@@ -1,0 +1,4 @@
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiEmpaqSystem.FormMenu.InitializeComponent() in C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\FormMenu.Designer.vb:line 39
+   at ServiEmpaqSystem.FormMenu..ctor() in C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\FormMenu.vb:line 8
+   at ServiEmpaqSystem.ServiEmpaqSystem.Program.Main() in C:\Users\Owner\OneDrive\Escritorio\visual basic\ServiEmpaqSystem\Program.vb:line 12
