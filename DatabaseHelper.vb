@@ -41,7 +41,15 @@ Public Class DatabaseHelper
                     PrecioUnitario REAL,
                     FOREIGN KEY(VentaId) REFERENCES Ventas(Id),
                     FOREIGN KEY(ProductoId) REFERENCES Productos(Id)
-                );"
+                );
+                CREATE TABLE IF NOT EXISTS Usuarios (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Username TEXT NOT NULL UNIQUE,
+                    Password TEXT NOT NULL,
+                    Role TEXT NOT NULL
+                );
+                INSERT OR IGNORE INTO Usuarios (Username, Password, Role) VALUES ('admin', 'admin', 'Gerente');
+                INSERT OR IGNORE INTO Usuarios (Username, Password, Role) VALUES ('vendedor', '1234', 'Vendedor');"
             Dim cmd As New SQLiteCommand(sql, conn)
             cmd.ExecuteNonQuery()
         End Using

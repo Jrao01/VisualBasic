@@ -8,6 +8,7 @@ Public Class FormVentas
     Private dtCarrito As New DataTable()
 
     Private Sub FormVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = "Facturación"
         CargarCombos()
         ConfigurarCarrito()
     End Sub
@@ -42,7 +43,9 @@ Public Class FormVentas
         dgvCarrito.DataSource = dtCarrito
     End Sub
 
-    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs)
+    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        If cmbProductos.SelectedItem Is Nothing Then Return
+
         Dim rowProd As DataRowView = cmbProductos.SelectedItem
         dgvCarrito.DataSource = Nothing ' Detach for update
         
@@ -62,10 +65,10 @@ Public Class FormVentas
         For Each row As DataRow In dtCarrito.Rows
             total += row("Subtotal")
         Next
-        lblTotal.Text = "TOTAL: $" & total.ToString("N2")
+        lblTotal.Text = "TOTAL: Bs" & total.ToString("N2")
     End Sub
 
-    Private Sub BtnFinalizar_Click(sender As Object, e As EventArgs)
+    Private Sub BtnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
         If dtCarrito.Rows.Count = 0 Then Return
 
         Using conn = DatabaseHelper.GetConnection()
@@ -98,13 +101,17 @@ Public Class FormVentas
                 Next
 
                 trans.Commit()
-                MessageBox.Show("Venta Generada Exitosamente. Factura #" & ventaId)
+                MessageBox.Show("Factura #" & ventaId & " generada correctamente.", "Facturación", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 dtCarrito.Clear()
-                lblTotal.Text = "TOTAL: $0.00"
+                lblTotal.Text = "TOTAL: Bs0.00"
             Catch ex As Exception
                 trans.Rollback()
-                MessageBox.Show("Error: " & ex.Message)
+                MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End Using
+    End Sub
+
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+        Me.Close()
     End Sub
 End Class

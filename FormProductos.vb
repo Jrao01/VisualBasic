@@ -19,7 +19,7 @@ Public Class FormProductos
         End Using
     End Sub
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs)
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If txtNombre.Text = "" Or txtPrecio.Text = "" Then
             MessageBox.Show("Por favor complete los campos obligatorios")
             Return
@@ -45,5 +45,9 @@ Public Class FormProductos
         txtDimensiones.Clear()
         txtPrecio.Clear()
         txtStock.Clear()
+    End Sub
+
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+        Me.Close()
     End Sub
 End Class

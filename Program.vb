@@ -1,4 +1,4 @@
-﻿Imports System
+Imports System
 Imports System.Windows.Forms
 
 Namespace ServiEmpaqSystem
@@ -9,7 +9,7 @@ Namespace ServiEmpaqSystem
                 Application.SetHighDpiMode(HighDpiMode.SystemAware)
                 Application.EnableVisualStyles()
                 Application.SetCompatibleTextRenderingDefault(False)
-                Application.Run(New FormMenu())
+                Application.Run(New FormLogin())
             Catch ex As Exception
                 System.IO.File.WriteAllText(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "startup_error.txt"), ex.ToString())
                 MessageBox.Show("Error al iniciar: " & ex.Message, "Error Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error)

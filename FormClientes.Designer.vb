@@ -44,6 +44,20 @@ Partial Class FormClientes
         Me.dgvClientes.Size = New System.Drawing.Size(760, 240)
         Me.dgvClientes.TabIndex = 0
         '
+        'btnVolver
+        '
+        Me.btnVolver = New System.Windows.Forms.Button()
+        Me.btnVolver.BackColor = System.Drawing.Color.Gray
+        Me.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVolver.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.btnVolver.ForeColor = System.Drawing.Color.White
+        Me.btnVolver.Location = New System.Drawing.Point(12, 460)
+        Me.btnVolver.Name = "btnVolver"
+        Me.btnVolver.Size = New System.Drawing.Size(100, 35)
+        Me.btnVolver.TabIndex = 2
+        Me.btnVolver.Text = "Volver"
+        Me.btnVolver.UseVisualStyleBackColor = False
+        '
         'pnlInputs
         '
         Me.pnlInputs.BackColor = System.Drawing.Color.FromArgb(233, 237, 236)
@@ -155,6 +169,7 @@ Partial Class FormClientes
         Me.Controls.Add(Me.lblHeader)
         Me.Controls.Add(Me.pnlInputs)
         Me.Controls.Add(Me.dgvClientes)
+        Me.Controls.Add(Me.btnVolver)
         Me.Name = "FormClientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Servi Empaq - Clientes"
@@ -178,4 +193,5 @@ Partial Class FormClientes
     Friend WithEvents txtTelefono As System.Windows.Forms.TextBox
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
     Friend WithEvents lblHeader As System.Windows.Forms.Label
+    Friend WithEvents btnVolver As System.Windows.Forms.Button
 End Class

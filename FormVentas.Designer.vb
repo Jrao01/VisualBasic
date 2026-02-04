@@ -90,8 +90,22 @@ Partial Class FormVentas
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(250, 30)
         Me.lblTotal.TabIndex = 5
-        Me.lblTotal.Text = "TOTAL: $0.00"
+        Me.lblTotal.Text = "TOTAL: Bs0.00"
         Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'btnVolver
+        '
+        Me.btnVolver = New System.Windows.Forms.Button()
+        Me.btnVolver.BackColor = System.Drawing.Color.Gray
+        Me.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVolver.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.btnVolver.ForeColor = System.Drawing.Color.White
+        Me.btnVolver.Location = New System.Drawing.Point(12, 415)
+        Me.btnVolver.Name = "btnVolver"
+        Me.btnVolver.Size = New System.Drawing.Size(100, 35)
+        Me.btnVolver.TabIndex = 10
+        Me.btnVolver.Text = "Volver"
+        Me.btnVolver.UseVisualStyleBackColor = False
         '
         'btnFinalizar
         '
@@ -153,6 +167,7 @@ Partial Class FormVentas
         Me.Controls.Add(Me.lblProd)
         Me.Controls.Add(Me.lblCli)
         Me.Controls.Add(Me.btnFinalizar)
+        Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.dgvCarrito)
         Me.Controls.Add(Me.btnAgregar)
@@ -176,6 +191,7 @@ Partial Class FormVentas
     Friend WithEvents dgvCarrito As System.Windows.Forms.DataGridView
     Friend WithEvents lblTotal As System.Windows.Forms.Label
     Friend WithEvents btnFinalizar As System.Windows.Forms.Button
+    Friend WithEvents btnVolver As System.Windows.Forms.Button
     Friend WithEvents lblCli As System.Windows.Forms.Label
     Friend WithEvents lblProd As System.Windows.Forms.Label
     Friend WithEvents lblCant As System.Windows.Forms.Label
